@@ -1,7 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+/* =========================================================
+   Global
+========================================================= */
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #ffffff;
+  background: #070711;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  @apply bg-gray-950 text-white;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #070711;
+  color: #ffffff;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   Headings
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+
+/* =========================================================
+   Selection
+========================================================= */
+
+::selection {
+  background: rgba(168, 85, 247, 0.35);
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   Scrollbar
+========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070711;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #292936;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #454552;
+}
+
+
+/* =========================================================
+   Textarea
+========================================================= */
+
+textarea {
+  scrollbar-width: thin;
+  scrollbar-color: #343442 transparent;
+}
+
+textarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: #343442;
+  border-radius: 999px;
+}
+
+
+/* =========================================================
+   Audio Player
+========================================================= */
+
+audio {
+  width: 100%;
+  height: 42px;
+}
+
+audio::-webkit-media-controls-panel {
+  background: #181822;
+}
+
+audio::-webkit-media-controls-enclosure {
+  border-radius: 12px;
+}
+
+
+/* =========================================================
+   Links
+========================================================= */
+
+a {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   Focus
+========================================================= */
+
+input:focus,
+textarea:focus,
+button:focus-visible,
+a:focus-visible {
+  outline: none;
+}
+
+
+/* =========================================================
+   Smooth transitions
+========================================================= */
+
+button,
+a,
+input,
+textarea {
+  transition-property:
+    color,
+    background-color,
+    border-color,
+    box-shadow,
+    transform,
+    opacity;
+  transition-duration: 200ms;
+}
+
+
+/* =========================================================
+   Mobile
+========================================================= */
+
+@media (max-width: 640px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
 }
